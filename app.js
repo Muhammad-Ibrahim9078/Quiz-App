@@ -3,6 +3,9 @@
   const nextBtn = document.getElementById("nextBtn");
   const scoreBox = document.getElementById("scoreBox");
 
+
+  // Api Call
+
   fetch('https://the-trivia-api.com/v2/questions?limit=10')
     .then(res => res.json())
     .then(data => {
@@ -34,6 +37,8 @@
 
     nextBtn.disabled = false;
   }
+
+  // Next Button functionn
 
   function nextQuestion() {
     index++;
